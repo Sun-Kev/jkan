@@ -1,0 +1,33 @@
+{
+  "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+  "dataset": [
+    {
+      "title": "Sample dataset",
+      "description": "This is an example dataset that comes with a new installation of JKAN",
+      "category": ["Education"],
+      "contactPoint": {
+        "fn": "Tim Wisniewski",
+        "hasEmail": "tim@timwis.com"
+      },
+      "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      ,
+      "distribution": [
+        {
+          "title": "Air Monitoring Stations CSV",
+          "downloadURL": "http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv",
+          "format": "csv"
+        },
+        {
+          "title": "Air Monitoring Stations Shapefile",
+          "downloadURL": "http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.zip",
+          "format": "shp"
+        },
+        {
+          "title": "Air Monitoring Stations GeoService",
+          "downloadURL": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Air_Monitoring_Stations/FeatureServer/0/query",
+          "format": "api"
+        }
+      ]
+    }
+  ]
+}

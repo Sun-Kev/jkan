@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Sample dataset",
+    "organization": "Sample Department",
+    "notes": "This is an example dataset that comes with a new installation of JKAN",
+    "category": ["Education"],
+    "url": "/jkan/datasets/sample-dataset/"
+  }
+]

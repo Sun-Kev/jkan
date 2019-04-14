@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              foaf: http://xmlns.com/foaf/0.1/">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>JKAN</title>
+  <meta name="description" content="A lightweight, backend-free open data portal, powered by Jekyll.">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css">
+  <link rel="stylesheet" href="/jkan/css/main.css">
+  <link rel="canonical" href="/jkan/">
+
+  
+
+  
+
+  
+
+  
+    <!-- Open Graph -->
+    <meta property="og:title" content="JKAN" />
+<meta property="og:site_name" content="JKAN" />
+
+<meta property="og:description" content="A lightweight, backend-free open data portal, powered by Jekyll." />
+<meta name="og:image" content="/jkan/img/jkan.png" />
+<meta name="og:image:width" content="150" />
+<meta name="og:image:height" content="150" />
+
+  
+
+  
+
+  <script>
+  var settings = {
+    BASE_URL: "/jkan",
+    PAGE_URL: "/",
+    REPO_BRANCH: "gh-pages",
+    REPO_OWNER: null,
+    REPO_NAME: null,
+    GITHUB_CLIENT_ID: "be09868f8ab2410c3b6b",
+    GATEKEEPER_HOST: "https://civictechnproject-gatekeeper.herokuapp.com"
+  }
+  </script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default" data-component="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/jkan/">JKAN</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+          
+            <li><a href="/jkan/datasets/">Datasets</a></li>
+          
+        
+          
+            <li><a href="/jkan/organizations/">Organizations</a></li>
+          
+        
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-hook="login-link">Login</a></li>
+        <li class="dropdown hidden" data-hook="user-dropdown">
+          <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
+            <span data-hook="user-name">User</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="admin-only" data-hook="admin-link-list-item"><a href="/jkan/admin/">Administration</a></li>
+            <li><a href="#" data-hook="logout-link">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <section data-hook="main" class="container">
+      <div class="jumbotron">
+  <h1>Welcome to Civic Technology</h1>
+  <p>
+    A lightweight, backend-free open data portal, powered by Jekyll.
+  </p>
+  <p><a class="btn btn-primary btn-lg" href="/jkan/datasets" role="button">Start browsing</a></p>
+</div>
+
+<h3>Browse by Category</h3>
+
+<div class="homepage-categories">
+
+  
+    
+    <a href="/jkan/datasets/?category=arts-culture-history" class="thumbnail" title="Arts / Culture / History">
+      
+        <img src="/jkan/img/categories/arts-culture-history.svg" alt="Arts / Culture / History">
+      
+      Arts / Culture / History
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=budget-finance" class="thumbnail" title="Budget / Finance logo by Renan Ferreira Santos from the Noun Project">
+      
+        <img src="/jkan/img/categories/budget-finance.svg" alt="Budget / Finance logo by Renan Ferreira Santos from the Noun Project">
+      
+      Budget / Finance
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=economy" class="thumbnail" title="Economy logo by Vectors Market from the Noun Project">
+      
+        <img src="/jkan/img/categories/economy.svg" alt="Economy logo by Vectors Market from the Noun Project">
+      
+      Economy
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=education" class="thumbnail" title="Education logo by Sergey Patutin from the Noun Project">
+      
+        <img src="/jkan/img/categories/education.svg" alt="Education logo by Sergey Patutin from the Noun Project">
+      
+      Education
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=elections-politics" class="thumbnail" title="Elections / Politics logo by Jean Soo from the Noun Project">
+      
+        <img src="/jkan/img/categories/elections-politics.svg" alt="Elections / Politics logo by Jean Soo from the Noun Project">
+      
+      Elections / Politics
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=environment" class="thumbnail" title="Environment">
+      
+        <img src="/jkan/img/categories/environment.svg" alt="Environment">
+      
+      Environment
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=food" class="thumbnail" title="Food logo by Creative Stall from the Noun Project">
+      
+        <img src="/jkan/img/categories/food.svg" alt="Food logo by Creative Stall from the Noun Project">
+      
+      Food
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=health-human-services" class="thumbnail" title="Health / Human Services logo by Timothy Miller from the Noun Project">
+      
+        <img src="/jkan/img/categories/health-human-services.svg" alt="Health / Human Services logo by Timothy Miller from the Noun Project">
+      
+      Health / Human Services
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=parks-recreation" class="thumbnail" title="Parks / Recreation logo by Pipe Rosas Licht from the Noun Project">
+      
+        <img src="/jkan/img/categories/parks-recreation.svg" alt="Parks / Recreation logo by Pipe Rosas Licht from the Noun Project">
+      
+      Parks / Recreation
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=planning-zoning" class="thumbnail" title="Planning / Zoning">
+      
+        <img src="/jkan/img/categories/planning-zoning.svg" alt="Planning / Zoning">
+      
+      Planning / Zoning
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=public-safety" class="thumbnail" title="Public Safety logo by Rohith M S from the Noun Project">
+      
+        <img src="/jkan/img/categories/public-safety.svg" alt="Public Safety logo by Rohith M S from the Noun Project">
+      
+      Public Safety
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=real-estate-land-records" class="thumbnail" title="Real Estate / Land Records">
+      
+        <img src="/jkan/img/categories/real-estate-land-records.svg" alt="Real Estate / Land Records">
+      
+      Real Estate / Land Records
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=transportation" class="thumbnail" title="Transportation logo by Dmitry Baranovskiy from the Noun Project">
+      
+        <img src="/jkan/img/categories/transportation.svg" alt="Transportation logo by Dmitry Baranovskiy from the Noun Project">
+      
+      Transportation
+    </a>
+  
+
+  
+    
+    <a href="/jkan/datasets/?category=uncategorized" class="thumbnail" title="Uncategorized logo by Edward Boatman from the Noun Project">
+      
+        <img src="/jkan/img/categories/uncategorized.svg" alt="Uncategorized logo by Edward Boatman from the Noun Project">
+      
+      Uncategorized
+    </a>
+  
+
+</div>
+
+    </section>
+
+    <!-- general behavior -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/jkan/scripts/dist/bundle.js"></script>
+
+<footer></footer>
+
+
+  </body>
+
+</html>

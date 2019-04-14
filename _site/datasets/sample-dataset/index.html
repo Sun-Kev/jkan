@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              foaf: http://xmlns.com/foaf/0.1/">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sample dataset - JKAN</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css">
+  <link rel="stylesheet" href="/jkan/css/main.css">
+  <link rel="canonical" href="/jkan/datasets/sample-dataset/">
+
+  
+
+  
+
+  
+
+  
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sample dataset" />
+<meta property="og:site_name" content="JKAN" />
+
+<meta property="og:description" content="This is an example dataset that comes with a new installation of JKAN" />
+<meta name="og:image" content="/jkan/img/jkan.png" />
+<meta name="og:image:width" content="150" />
+<meta name="og:image:height" content="150" />
+
+  
+
+  
+
+  <script>
+  var settings = {
+    BASE_URL: "/jkan",
+    PAGE_URL: "/datasets/sample-dataset/",
+    REPO_BRANCH: "gh-pages",
+    REPO_OWNER: null,
+    REPO_NAME: null,
+    GITHUB_CLIENT_ID: "be09868f8ab2410c3b6b",
+    GATEKEEPER_HOST: "https://civictechnproject-gatekeeper.herokuapp.com"
+  }
+  </script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default" data-component="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/jkan/">JKAN</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+          
+            <li class="active"><a href="/jkan/datasets/">Datasets <span class="sr-only">(current)</span></a></li>
+          
+        
+          
+            <li><a href="/jkan/organizations/">Organizations</a></li>
+          
+        
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-hook="login-link">Login</a></li>
+        <li class="dropdown hidden" data-hook="user-dropdown">
+          <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
+            <span data-hook="user-name">User</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="admin-only" data-hook="admin-link-list-item"><a href="/jkan/admin/">Administration</a></li>
+            <li><a href="#" data-hook="logout-link">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <section data-hook="main" class="container">
+      <ol class="breadcrumb">
+  
+    <li><a href="/jkan/"><i class="fa fa-home" aria-label="Home"></i></a></li>
+    
+      
+      
+        <li><a href="/jkan/datasets/">Datasets</a></li>
+      
+    
+    <li class="active">Sample dataset</li>
+  
+</ol>
+
+
+
+
+
+
+
+
+
+<div data-component="view-switcher">
+  <div class="row" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="/datasets/sample-dataset/">
+    
+      <div class="col-sm-3" property="dct:publisher" resource="/jkan/datasets/?organization=sample-department">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              
+              <a href="/jkan/datasets/?organization=sample-department" class="thumbnail"><img src="http://i.imgur.com/mrC5xVT.png" alt="Sample Department logo"></a>
+              
+            </div>
+            <div class="panel-body">
+              <h3>
+                <a href="/jkan/datasets/?organization=sample-department" about="/jkan/datasets/?organization=sample-department" property="foaf:homepage">
+                  <span property="foaf:name">Sample Department</span>
+                </a>
+              </h3>
+              This is an example department provided with a new installation of JKAN
+            </div>
+          </div>
+        </div>
+    <div class="col-sm-9">
+    
+      <h1>
+        <span property="dct:title">Sample dataset</span>
+        <a href="?view=edit" class="pull-right btn btn-default admin-only" data-hook="edit-dataset-btn">Edit</a>
+      </h1>
+      <p property="dct:description">This is an example dataset that comes with a new installation of JKAN</p>
+
+      <h2>Resources</h2>
+      <ul>
+        
+        <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
+          <a href="http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv" property='dcat:accessURL'><span property="dct:title">Air Monitoring Stations CSV</span></a>
+          <span class="label label-default" property='dcat:mediaType'>csv</span>
+          <a href="#" class="show-resource-details" data-hook="show-resource-details">(Details)</a>
+          
+          <table class="table table-striped table-condensed resource-details" data-hook="resource-details">
+            
+              
+            
+              
+            
+              
+            
+          </table>
+        </li>
+        
+        <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
+          <a href="http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.zip" property='dcat:accessURL'><span property="dct:title">Air Monitoring Stations Shapefile</span></a>
+          <span class="label label-default" property='dcat:mediaType'>shp</span>
+          <a href="#" class="show-resource-details" data-hook="show-resource-details">(Details)</a>
+          
+          <table class="table table-striped table-condensed resource-details" data-hook="resource-details">
+            
+              
+            
+              
+            
+              
+            
+          </table>
+        </li>
+        
+        <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
+          <a href="https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Air_Monitoring_Stations/FeatureServer/0/query" property='dcat:accessURL'><span property="dct:title">Air Monitoring Stations GeoService</span></a>
+          <span class="label label-default" property='dcat:mediaType'>api</span>
+          <a href="#" class="show-resource-details" data-hook="show-resource-details">(Details)</a>
+          
+          <table class="table table-striped table-condensed resource-details" data-hook="resource-details">
+            
+              
+            
+              
+            
+              
+            
+          </table>
+        </li>
+        
+      </ul>
+
+      <h2>Additional Info</h2>
+      <table class="table table-striped dataset-details">
+        
+          <tr>
+            <th>License</th>
+            <td>
+              <a property="dct:license" resource="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+                UK Open Government Licence
+              </a>
+            </td>
+          </tr>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+              
+                <tr>
+  <th>Category</th>
+  <td>
+    
+      
+        <a href="/jkan/datasets/?category=education">Education</a>
+      
+    
+  </td>
+              
+            
+          
+        
+          
+            
+            
+              
+                <tr>
+                  <th>Maintainer</th>
+                  <td>Tim Wisniewski</td>
+                </tr>
+              
+            
+          
+        
+          
+            
+            
+              
+                <tr>
+                  <th>Maintainer Email</th>
+                  <td>tim@timwis.com</td>
+                </tr>
+              
+            
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <div class="row" data-hook="view" data-view="edit">
+    <div class="col-sm-8 col-sm-offset-2">
+      
+
+
+
+
+<form data-component="form dataset-form"
+  data-file-dir="_datasets"
+  data-render-dir="datasets"
+  
+    data-file-path="_datasets/sample-dataset.md"
+    data-render-path="/datasets/sample-dataset/"
+  >
+  <input type="hidden" id="schema" name="schema" value="default">
+
+  <fieldset>
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="title">Title</label>
+  <input type="text" class="form-control" id="title" name="title" placeholder="" value="Sample dataset">
+</div>
+
+      
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="organization">Organization</label>
+  <div class="input-group">
+    <select class="form-control" id="organization" name="organization">
+      <option value="">Select...</option>
+      
+        <option selected="selected">Sample Department</option>
+      
+    </select>
+    <span class="input-group-btn">
+      <a href="/jkan/add-organization/" class="btn btn-default"><i class="fa fa-plus"></i></a>
+    </span>
+  </div>
+</div>
+      
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="notes">Description</label>
+  <textarea class="form-control" id="notes" name="notes" placeholder="Description">This is an example dataset that comes with a new installation of JKAN</textarea>
+</div>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </fieldset>
+
+  <h2>Resources</h2>
+  <div data-component="editable-list" data-item-label="resource">
+    <div data-hook="items">
+    
+      <div class="well" data-hook="item">
+  <fieldset>
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][name]">Resource Name</label>
+  <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="" value="Air Monitoring Stations CSV">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][url]">URL</label>
+  <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="" value="http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][format]">Format</label>
+  <select class="form-control" id="resources[][format]" name="resources[][format]">
+    <option value="">Select...</option>
+    
+      <option>api</option>
+    
+      <option selected="selected">csv</option>
+    
+      <option>json</option>
+    
+      <option>geojson</option>
+    
+      <option>html</option>
+    
+      <option>kml</option>
+    
+      <option>kmz</option>
+    
+      <option>shp</option>
+    
+      <option>xml</option>
+    
+  </select>
+</div>
+  
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove Resource</button>
+</div>
+    
+      <div class="well" data-hook="item">
+  <fieldset>
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][name]">Resource Name</label>
+  <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="" value="Air Monitoring Stations Shapefile">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][url]">URL</label>
+  <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="" value="http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.zip">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][format]">Format</label>
+  <select class="form-control" id="resources[][format]" name="resources[][format]">
+    <option value="">Select...</option>
+    
+      <option>api</option>
+    
+      <option>csv</option>
+    
+      <option>json</option>
+    
+      <option>geojson</option>
+    
+      <option>html</option>
+    
+      <option>kml</option>
+    
+      <option>kmz</option>
+    
+      <option selected="selected">shp</option>
+    
+      <option>xml</option>
+    
+  </select>
+</div>
+  
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove Resource</button>
+</div>
+    
+      <div class="well" data-hook="item">
+  <fieldset>
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][name]">Resource Name</label>
+  <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="" value="Air Monitoring Stations GeoService">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][url]">URL</label>
+  <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="" value="https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Air_Monitoring_Stations/FeatureServer/0/query">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][format]">Format</label>
+  <select class="form-control" id="resources[][format]" name="resources[][format]">
+    <option value="">Select...</option>
+    
+      <option selected="selected">api</option>
+    
+      <option>csv</option>
+    
+      <option>json</option>
+    
+      <option>geojson</option>
+    
+      <option>html</option>
+    
+      <option>kml</option>
+    
+      <option>kmz</option>
+    
+      <option>shp</option>
+    
+      <option>xml</option>
+    
+  </select>
+</div>
+  
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove Resource</button>
+</div>
+    
+    </div>
+
+    <button type="button" class="btn btn-default" data-hook="add-item-btn" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
+
+    <script type="text/template" data-hook="item-template">
+    <div class="well" data-hook="item">
+  <fieldset>
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][name]">Resource Name</label>
+  <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="" value="">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][url]">URL</label>
+  <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="" value="">
+</div>
+
+  
+    
+    
+    
+    <div class="form-group">
+  <label for="resources[][format]">Format</label>
+  <select class="form-control" id="resources[][format]" name="resources[][format]">
+    <option value="">Select...</option>
+    
+      <option>api</option>
+    
+      <option>csv</option>
+    
+      <option>json</option>
+    
+      <option>geojson</option>
+    
+      <option>html</option>
+    
+      <option>kml</option>
+    
+      <option>kmz</option>
+    
+      <option>shp</option>
+    
+      <option>xml</option>
+    
+  </select>
+</div>
+  
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove Resource</button>
+</div>
+    </script>
+  </div>
+
+  <fieldset>
+    <h2>Additional Info</h2>
+
+    
+      
+    
+      
+    
+      
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="license">License</label>
+  <select class="form-control" id="license" name="license">
+    <option value="">Select...</option>
+    
+      <option value="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</option>
+    
+      <option value="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share-Alike</option>
+    
+      <option value="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CCZero</option>
+    
+      <option selected="selected" value="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">UK Open Government Licence</option>
+    
+      <option value="http://www.opendefinition.org/licenses/odc-by">Open Data Commons Attribution License</option>
+    
+      <option value="http://www.opendefinition.org/licenses/odc-odbl">Open Data Commons Open Database License (ODbL)</option>
+    
+      <option value="http://www.opendefinition.org/licenses/odc-pddl">Open Data Commons Public Domain Dedication and Licence (PDDL)</option>
+    
+      <option value="">Not Applicable</option>
+    
+  </select>
+  <div class="help-block">Not sure what license to use? See <a href="http://licenses.opendefinition.org/">http://licenses.opendefinition.org/</a></div>
+</div>
+
+      
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="category[]">Category</label>
+  <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
+    
+      <option>Arts / Culture / History</option>
+    
+      <option>Budget / Finance</option>
+    
+      <option>Economy</option>
+    
+      <option selected="selected">Education</option>
+    
+      <option>Elections / Politics</option>
+    
+      <option>Environment</option>
+    
+      <option>Food</option>
+    
+      <option>Health / Human Services</option>
+    
+      <option>Parks / Recreation</option>
+    
+      <option>Planning / Zoning</option>
+    
+      <option>Public Safety</option>
+    
+      <option>Real Estate / Land Records</option>
+    
+      <option>Transportation</option>
+    
+      <option>Uncategorized</option>
+    
+  </select>
+</div>
+      
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="maintainer">Maintainer</label>
+  <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="" value="Tim Wisniewski">
+</div>
+
+      
+    
+      
+        
+        
+        
+        <div class="form-group">
+  <label for="maintainer_email">Maintainer Email</label>
+  <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="" value="tim@timwis.com">
+</div>
+
+      
+    
+
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+    <button class="btn btn-danger" data-component="delete-page-button" data-file-path="_datasets/sample-dataset.md">
+      <i class="fa fa-trash"></i> Delete dataset
+    </button>
+  
+</form>
+
+    </div>
+    <div class="col-sm-2">
+      <a href="/jkan/datasets/sample-dataset/" class="btn btn-default pull-right">Cancel</a>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <!-- general behavior -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/jkan/scripts/dist/bundle.js"></script>
+
+<footer></footer>
+
+
+  </body>
+
+</html>

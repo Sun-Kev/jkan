@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              foaf: http://xmlns.com/foaf/0.1/">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Administration - JKAN</title>
+  <meta name="description" content="A lightweight, backend-free open data portal, powered by Jekyll.">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css">
+  <link rel="stylesheet" href="/jkan/css/main.css">
+  <link rel="canonical" href="/jkan/admin/">
+
+  
+
+  
+
+  
+
+  
+    <!-- Open Graph -->
+    <meta property="og:title" content="Administration" />
+<meta property="og:site_name" content="JKAN" />
+
+<meta property="og:description" content="A lightweight, backend-free open data portal, powered by Jekyll." />
+<meta name="og:image" content="/jkan/img/jkan.png" />
+<meta name="og:image:width" content="150" />
+<meta name="og:image:height" content="150" />
+
+  
+
+  
+
+  <script>
+  var settings = {
+    BASE_URL: "/jkan",
+    PAGE_URL: "/admin/",
+    REPO_BRANCH: "gh-pages",
+    REPO_OWNER: null,
+    REPO_NAME: null,
+    GITHUB_CLIENT_ID: "be09868f8ab2410c3b6b",
+    GATEKEEPER_HOST: "https://civictechnproject-gatekeeper.herokuapp.com"
+  }
+  </script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default" data-component="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/jkan/">JKAN</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+          
+            <li><a href="/jkan/datasets/">Datasets</a></li>
+          
+        
+          
+            <li><a href="/jkan/organizations/">Organizations</a></li>
+          
+        
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-hook="login-link">Login</a></li>
+        <li class="dropdown hidden" data-hook="user-dropdown">
+          <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
+            <span data-hook="user-name">User</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="admin-only" data-hook="admin-link-list-item"><a href="/jkan/admin/">Administration</a></li>
+            <li><a href="#" data-hook="logout-link">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <section data-hook="main" class="container">
+      <ol class="breadcrumb">
+  
+    <li><a href="/jkan/"><i class="fa fa-home" aria-label="Home"></i></a></li>
+    
+    <li class="active">Administration</li>
+  
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
+  <li role="presentation"><a href="#authentication" aria-controls="authentication" role="tab" data-toggle="tab">Authentication</a></li>
+  <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categories</a></li>
+  <li role="presentation"><a href="#licenses" aria-controls="licenses" role="tab" data-toggle="tab">Licenses</a></li>
+  <li role="presentation"><a href="#theme" aria-controls="thtme" role="tab" data-toggle="tab">Theme</a></li>
+  <li role="presentation"><a href="#maintenance" aria-controls="maintenance" role="tab" data-toggle="tab">Maintenance</a></li>
+</ul>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="general">
+    <h2>General</h2>
+    <form data-component="admin-form" data-file-path="_config.yml">
+
+      <fieldset>
+
+        <div class="form-group">
+          <label for="title">Site Title</label>
+          <input type="text" class="form-control" id="title" name="title" value="JKAN">
+        </div>
+
+        <div class="form-group">
+          <label for="greeting">Site Greeting</label>
+          <input type="text" class="form-control" id="greeting" name="greeting" value="Welcome to JKAN">
+          <p class="help-block">Displayed on the homepage</p>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Site Description</label>
+          <textarea class="form-control" id="description" name="description">A lightweight, backend-free open data portal, powered by Jekyll.</textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="baseurl">Base URL</label>
+          <input type="text" class="form-control" id="baseurl" name="baseurl" value="/jkan" placeholder="ie. /JKAN">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </fieldset>
+
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="authentication">
+    <h2>Authentication</h2>
+    <form data-component="admin-form" data-file-path="_config.yml">
+
+      <fieldset>
+
+        <div class="form-group">
+          <label for="github_client_id">GitHub Client ID</label>
+          <input type="text" class="form-control" id="github_client_id" name="github_client_id" value="be09868f8ab2410c3b6b" placeholder="ie. 9098sdf876sdfs768az">
+          <p class="help-block"><a href="https://github.com/settings/applications/new">Register a Github application</a> to get a Client ID</p>
+        </div>
+
+        <div class="form-group">
+          <label for="gatekeeper_host">Gatekeeper Host</label>
+          <input type="text" class="form-control" id="gatekeeper_host" name="gatekeeper_host" value="https://civictechnproject-gatekeeper.herokuapp.com" placeholder="ie. http://jkan-gatekeeper.herokuapp.com">
+          <p class="help-block">Authentication server you deployed</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </fieldset>
+
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="categories">
+    <h2>Categories</h2>
+    
+    <form data-component="categories-form editable-list" data-file-path="_data/categories.yml" data-item-label="category">
+      <div data-hook="items">
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Arts / Culture / History">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/arts-culture-history.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Budget / Finance">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/budget-finance.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Renan Ferreira Santos from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Economy">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/economy.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Vectors Market from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Education">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/education.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Sergey Patutin from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Elections / Politics">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/elections-politics.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Jean Soo from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Environment">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/environment.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Food">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/food.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Creative Stall from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Health / Human Services">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/health-human-services.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Timothy Miller from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Parks / Recreation">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/parks-recreation.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Pipe Rosas Licht from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Planning / Zoning">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/planning-zoning.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Public Safety">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/public-safety.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Rohith M S from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Real Estate / Land Records">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/real-estate-land-records.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Transportation">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/transportation.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Dmitry Baranovskiy from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+          <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Uncategorized">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/uncategorized.svg">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Edward Boatman from the Noun Project">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+        
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-default" data-hook="add-item-btn"><i class="fa fa-plus"></i> Add Category</button>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <script type="text/template" data-hook="item-template">
+      <div class="well" data-hook="item">
+  <fieldset>
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][name]">Name</label>
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo]">Logo</label>
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="form-group">
+  <label for="categories[][logo_credit]">Logo Credit</label>
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
+</div>
+
+    
+      
+      
+      
+      <div class="checkbox">
+  <label>
+    <input type="checkbox" name="categories[][featured]:boolean" value="True">
+    Featured on Homepage
+  </label>
+</div>
+    
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+      </script>
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="licenses">
+    <h2>Licenses</h2>
+    <form data-component="licenses-form editable-list" data-file-path="_data/licenses.yml" data-item-label="license">
+      <div data-hook="items">
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="Creative Commons Attribution">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="https://creativecommons.org/licenses/by/4.0/">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="Creative Commons Attribution Share-Alike">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="https://creativecommons.org/licenses/by-sa/4.0/">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="Creative Commons CCZero">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="https://creativecommons.org/publicdomain/zero/1.0/">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="UK Open Government Licence">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="Open Data Commons Attribution License">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="http://www.opendefinition.org/licenses/odc-by">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="Open Data Commons Open Database License (ODbL)">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="http://www.opendefinition.org/licenses/odc-odbl">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+            <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="Open Data Commons Public Domain Dedication and Licence (PDDL)">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="http://www.opendefinition.org/licenses/odc-pddl">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+          
+        
+          
+        
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-default" data-hook="add-item-btn"><i class="fa fa-plus"></i> Add License</button>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <script type="text/template" data-hook="item-template">
+      <div class="well" data-hook="item">
+  <fieldset>
+    
+    <div class="form-group">
+  <label for="licenses[][license_name]">License Name</label>
+  <input type="text" class="form-control" id="licenses[][license_name]" name="licenses[][license_name]" placeholder="" value="">
+</div>
+
+    
+    <div class="form-group">
+  <label for="licenses[][license_url]">License URL</label>
+  <input type="text" class="form-control" id="licenses[][license_url]" name="licenses[][license_url]" placeholder="" value="">
+</div>
+
+  </fieldset>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
+</div>
+
+      </script>
+
+      <input type="hidden" name="licenses[][license_url]" value="" />
+      <input type="hidden" name="licenses[][license_name]" value="Not Applicable" />
+
+    </form>
+
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="theme">
+    <h2>Theme</h2>
+    <div class="theme-gallery" data-component="theme-gallery" data-file-path="_config.yml">
+      
+      <div class="panel panel-primary">
+        <img src="/jkan/img/themes/default.png" alt="Default logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" disabled="disabled">Activated</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/cerulean.png" alt="Cerulean logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Cerulean">Activate Cerulean</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/cosmo.png" alt="Cosmo logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Cosmo">Activate Cosmo</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/cyborg.png" alt="Cyborg logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Cyborg">Activate Cyborg</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/darkly.png" alt="Darkly logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Darkly">Activate Darkly</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/flatly.png" alt="Flatly logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Flatly">Activate Flatly</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/journal.png" alt="Journal logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Journal">Activate Journal</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/lumen.png" alt="Lumen logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Lumen">Activate Lumen</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/paper.png" alt="Paper logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Paper">Activate Paper</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/readable.png" alt="Readable logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Readable">Activate Readable</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/sandstone.png" alt="Sandstone logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Sandstone">Activate Sandstone</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/simplex.png" alt="Simplex logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Simplex">Activate Simplex</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/slate.png" alt="Slate logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Slate">Activate Slate</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/spacelab.png" alt="Spacelab logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Spacelab">Activate Spacelab</button>
+          
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <img src="/jkan/img/themes/superhero.png" alt="Superhero logo">
+        <div class="panel-body">
+          
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Superhero">Activate Superhero</button>
+          
+        </div>
+      </div>
+      
+    </div>
+    Themes provided by <a href="https://bootswatch.com/">Bootswatch</a> via <a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>.
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="maintenance">
+    <h2>Site Maintenance</h2>
+    <a href="https://github.com///compare/gh-pages...timwis:gh-pages?expand=1" class="btn btn-info">Check for updates</a>
+  </div>
+</div>
+
+    </section>
+
+    <!-- general behavior -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/jkan/scripts/dist/bundle.js"></script>
+
+<footer></footer>
+
+
+  </body>
+
+</html>
