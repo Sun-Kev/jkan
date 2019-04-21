@@ -1,9 +1,31 @@
+@import "custom.css"; 
+
+
 .organization-thumbnail img {
   width: 64px;
 }
 
 body{
-  background-color: lightblue;
+  background-color: #EAD1F9;
+  font-family: Verdana;
+}
+
+.thumbnail {
+  background-color: #EAD1F9;
+}
+
+.jumbotron {
+  background-color: #EAD1F9;
+  color: #373438;
+}
+
+.btn{
+  background-color: #FFDD6E;
+  color: #373438;
+}
+
+.browse{
+  color: #373438;
 }
 
 dataset {

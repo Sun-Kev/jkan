@@ -2,30 +2,95 @@
   "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
   "dataset": [
     {
-      "title": "Sample dataset",
-      "description": "This is an example dataset that comes with a new installation of JKAN",
-      "category": ["Education"],
-      "contactPoint": {
-        "fn": "Tim Wisniewski",
-        "hasEmail": "tim@timwis.com"
-      },
-      "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      "title": "Austin Affordable Housing Data Sets",
+      "description": "Austin Affordable Housing Data Set",
+      "category": ["Affordable Housing"],
+      "license": ""
       ,
       "distribution": [
         {
-          "title": "Air Monitoring Stations CSV",
-          "downloadURL": "http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv",
+          "title": "Austin Affordable Housing CSV",
+          "downloadURL": "https://data.austintexas.gov/api/views/x5p7-qyuv/rows.csv?accessType=DOWNLOAD",
           "format": "csv"
-        },
+        }
+      ]
+    },
+    {
+      "title": "Chicago Affordable Housing Data Sets",
+      "description": "Chicago's Affordable Housing Data Set",
+      "category": ["Affordable Housing"],
+      "contactPoint": {
+        "fn": "Kevin Sun & Natasha Mathur"
+      },
+      "license": ""
+      ,
+      "distribution": [
         {
-          "title": "Air Monitoring Stations Shapefile",
-          "downloadURL": "http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.zip",
-          "format": "shp"
-        },
+          "title": "Chicago Affordable Housing CSV",
+          "downloadURL": "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.csv?accessType=DOWNLOAD",
+          "format": "csv"
+        }
+      ]
+    },
+    {
+      "title": "Los Angeles Affordable Housing Data Sets",
+      "description": "Los Angeles Affordable Housing Data Set",
+      "category": ["Affordable Housing"],
+      "license": ""
+      ,
+      "distribution": [
         {
-          "title": "Air Monitoring Stations GeoService",
-          "downloadURL": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Air_Monitoring_Stations/FeatureServer/0/query",
-          "format": "api"
+          "title": "LA Affordable Housing CSV",
+          "downloadURL": "https://data.lacity.org/api/views/u4mj-cwbz/rows.csv?accessType=DOWNLOAD",
+          "format": "csv"
+        }
+      ]
+    },
+    {
+      "title": "New York Affordable Housing Data Sets",
+      "description": "New York Affordable Housing Data Set",
+      "category": ["Affordable Housing"],
+      "contactPoint": {
+        "fn": "Kevin Sun & Natasha Mathur"
+      },
+      "license": ""
+      ,
+      "distribution": [
+        {
+          "title": "NYC Affordable Housing CSV",
+          "downloadURL": "https://data.cityofnewyork.us/api/views/hg8x-zxpr/rows.csv?accessType=DOWNLOAD",
+          "format": "csv"
+        }
+      ]
+    },
+    {
+      "title": "Philadelphia Affordable Housing Data Sets",
+      "description": "Philadelphia's Affordable Housing Data Set",
+      "category": ["Affordable Housing"],
+      "contactPoint": {
+        "fn": "Kevin Sun & Natasha Mathur"
+      },
+      "license": ""
+      ,
+      "distribution": [
+        {
+          "title": "Philadelphia Affordable Housing CSV",
+          "downloadURL": "https://phl.carto.com/api/v2/sql?q=SELECT+*+FROM+affordablehousingproduction&filename=affordablehousingproduction&format=csv&skipfields=cartodb_id,the_geom,the_geom_webmercator",
+          "format": "csv"
+        }
+      ]
+    },
+    {
+      "title": "San Francisco Affordable Housing Data Sets",
+      "description": "San Francisco Affordable Housing Data Set",
+      "category": ["Affordable Housing"],
+      "license": ""
+      ,
+      "distribution": [
+        {
+          "title": "SF Affordable Housing CSV",
+          "downloadURL": "https://data.sfgov.org/api/views/d4zr-mbcm/rows.csv?accessType=DOWNLOAD",
+          "format": "csv"
         }
       ]
     }

@@ -10,11 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Administration - JKAN</title>
-  <meta name="description" content="A lightweight, backend-free open data portal, powered by Jekyll.">
+  <meta name="description" content="Looking at affordable housing developments across major cities in the United States">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css">
   
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -34,7 +36,7 @@
     <meta property="og:title" content="Administration" />
 <meta property="og:site_name" content="JKAN" />
 
-<meta property="og:description" content="A lightweight, backend-free open data portal, powered by Jekyll." />
+<meta property="og:description" content="Looking at affordable housing developments across major cities in the United States" />
 <meta name="og:image" content="/jkan/img/jkan.png" />
 <meta name="og:image:width" content="150" />
 <meta name="og:image:height" content="150" />
@@ -136,13 +138,13 @@
 
         <div class="form-group">
           <label for="greeting">Site Greeting</label>
-          <input type="text" class="form-control" id="greeting" name="greeting" value="Welcome to JKAN">
+          <input type="text" class="form-control" id="greeting" name="greeting" value="Welcome to the Affordable Housing Comparison Portal">
           <p class="help-block">Displayed on the homepage</p>
         </div>
 
         <div class="form-group">
           <label for="description">Site Description</label>
-          <textarea class="form-control" id="description" name="description">A lightweight, backend-free open data portal, powered by Jekyll.</textarea>
+          <textarea class="form-control" id="description" name="description">Looking at affordable housing developments across major cities in the United States</textarea>
         </div>
 
         <div class="form-group">
@@ -196,7 +198,7 @@
       
       <div class="form-group">
   <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Arts / Culture / History">
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Chicago">
 </div>
 
     
@@ -205,7 +207,7 @@
       
       <div class="form-group">
   <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/arts-culture-history.svg">
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/chicago.svg">
 </div>
 
     
@@ -240,7 +242,7 @@
       
       <div class="form-group">
   <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Budget / Finance">
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="New York">
 </div>
 
     
@@ -249,183 +251,7 @@
       
       <div class="form-group">
   <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/budget-finance.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Renan Ferreira Santos from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Economy">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/economy.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Vectors Market from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Education">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/education.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Sergey Patutin from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Elections / Politics">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/elections-politics.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Jean Soo from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Environment">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/environment.svg">
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/new_york.svg">
 </div>
 
     
@@ -460,7 +286,7 @@
       
       <div class="form-group">
   <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Food">
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Los Angeles">
 </div>
 
     
@@ -469,139 +295,7 @@
       
       <div class="form-group">
   <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/food.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Creative Stall from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Health / Human Services">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/health-human-services.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Timothy Miller from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Parks / Recreation">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/parks-recreation.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Pipe Rosas Licht from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Planning / Zoning">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/planning-zoning.svg">
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/la.svg">
 </div>
 
     
@@ -636,7 +330,7 @@
       
       <div class="form-group">
   <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Public Safety">
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="San Francisco">
 </div>
 
     
@@ -645,51 +339,7 @@
       
       <div class="form-group">
   <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/public-safety.svg">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Rohith M S from the Noun Project">
-</div>
-
-    
-      
-      
-      
-      <div class="checkbox">
-  <label>
-    <input type="checkbox" name="categories[][featured]:boolean" value="True" checked="checked">
-    Featured on Homepage
-  </label>
-</div>
-    
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
-        
-          <div class="well" data-hook="item">
-  <fieldset>
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Real Estate / Land Records">
-</div>
-
-    
-      
-      
-      
-      <div class="form-group">
-  <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/real-estate-land-records.svg">
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/sf.svg">
 </div>
 
     
@@ -724,7 +374,7 @@
       
       <div class="form-group">
   <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Transportation">
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Philadelphia">
 </div>
 
     
@@ -733,7 +383,7 @@
       
       <div class="form-group">
   <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/transportation.svg">
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/philly.svg">
 </div>
 
     
@@ -742,7 +392,7 @@
       
       <div class="form-group">
   <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Dmitry Baranovskiy from the Noun Project">
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
 </div>
 
     
@@ -768,7 +418,7 @@
       
       <div class="form-group">
   <label for="categories[][name]">Name</label>
-  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Uncategorized">
+  <input type="text" class="form-control" id="categories[][name]" name="categories[][name]" placeholder="" value="Austin">
 </div>
 
     
@@ -777,7 +427,7 @@
       
       <div class="form-group">
   <label for="categories[][logo]">Logo</label>
-  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/uncategorized.svg">
+  <input type="text" class="form-control" id="categories[][logo]" name="categories[][logo]" placeholder="" value="/img/categories/austin.svg">
 </div>
 
     
@@ -786,7 +436,7 @@
       
       <div class="form-group">
   <label for="categories[][logo_credit]">Logo Credit</label>
-  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="Edward Boatman from the Noun Project">
+  <input type="text" class="form-control" id="categories[][logo_credit]" name="categories[][logo_credit]" placeholder="" value="">
 </div>
 
     
@@ -1052,11 +702,11 @@
     <h2>Theme</h2>
     <div class="theme-gallery" data-component="theme-gallery" data-file-path="_config.yml">
       
-      <div class="panel panel-primary">
+      <div class="panel panel-default">
         <img src="/jkan/img/themes/default.png" alt="Default logo">
         <div class="panel-body">
           
-            <button type="button" class="btn btn-default" disabled="disabled">Activated</button>
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Default">Activate Default</button>
           
         </div>
       </div>
@@ -1178,11 +828,11 @@
         </div>
       </div>
       
-      <div class="panel panel-default">
+      <div class="panel panel-primary">
         <img src="/jkan/img/themes/superhero.png" alt="Superhero logo">
         <div class="panel-body">
           
-            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="Superhero">Activate Superhero</button>
+            <button type="button" class="btn btn-default" disabled="disabled">Activated</button>
           
         </div>
       </div>

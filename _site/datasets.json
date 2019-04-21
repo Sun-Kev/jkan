@@ -1,9 +1,44 @@
 [
   {
-    "title": "Sample dataset",
-    "organization": "Sample Department",
-    "notes": "This is an example dataset that comes with a new installation of JKAN",
-    "category": ["Education"],
-    "url": "/jkan/datasets/sample-dataset/"
+    "title": "Austin Affordable Housing Data Sets",
+    "organization": "Austin",
+    "notes": "Austin Affordable Housing Data Set",
+    "category": ["Affordable Housing"],
+    "url": "/jkan/datasets/austin/"
+  },
+  {
+    "title": "Chicago Affordable Housing Data Sets",
+    "organization": "Chicago",
+    "notes": "Chicago's Affordable Housing Data Set",
+    "category": ["Affordable Housing"],
+    "url": "/jkan/datasets/chicago/"
+  },
+  {
+    "title": "Los Angeles Affordable Housing Data Sets",
+    "organization": "Los Angeles",
+    "notes": "Los Angeles Affordable Housing Data Set",
+    "category": ["Affordable Housing"],
+    "url": "/jkan/datasets/la/"
+  },
+  {
+    "title": "New York Affordable Housing Data Sets",
+    "organization": "New York City",
+    "notes": "New York Affordable Housing Data Set",
+    "category": ["Affordable Housing"],
+    "url": "/jkan/datasets/nyc/"
+  },
+  {
+    "title": "Philadelphia Affordable Housing Data Sets",
+    "organization": "Philadelphia",
+    "notes": "Philadelphia's Affordable Housing Data Set",
+    "category": ["Affordable Housing"],
+    "url": "/jkan/datasets/philly/"
+  },
+  {
+    "title": "San Francisco Affordable Housing Data Sets",
+    "organization": "San Francisco",
+    "notes": "San Francisco Affordable Housing Data Set",
+    "category": ["Affordable Housing"],
+    "url": "/jkan/datasets/sf/"
   }
 ]
