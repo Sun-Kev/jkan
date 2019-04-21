@@ -1,3 +1,6 @@
+@import "custom.css"; 
+
+
 .organization-thumbnail img {
   width: 64px;
 }
