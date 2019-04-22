@@ -1,5 +1,5 @@
 ---
 title: Austin
-description: This is an example department provided with a new installation of JKAN
+description: Information about the affordable housing market in Austin, TX.
 logo: /img/categories/austin.svg
 ---
