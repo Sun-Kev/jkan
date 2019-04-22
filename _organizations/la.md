@@ -1,5 +1,5 @@
 ---
 title: Los Angeles
-description: This is an example department provided with a new installation of JKAN
+description: Information about the affordable housing market in Los Angeles, CA.
 logo: /img/categories/la.svg
 ---
