@@ -5,6 +5,10 @@
   width: 64px;
 }
 
+.navbar-default {
+  background-color: white;
+}
+
 body{
   background-color: #EAD1F9;
   font-family: Verdana;
