@@ -144,6 +144,10 @@ dataset {
   text-align: center;
 }
 
+.thumbnail:hover {
+  background-color: blue;
+}
+
 .theme-gallery .panel img {
   width: 100%;
 }
