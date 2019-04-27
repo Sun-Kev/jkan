@@ -173,7 +173,8 @@ dataset {
   color: white;
 }
 
-a {color: #36D8E5;}
+a {color: #36D8E5;
+  font-size: 15px;}
 
 a:hover{
   color: #249099;
