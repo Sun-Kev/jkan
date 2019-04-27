@@ -6,22 +6,31 @@
 }
 
 body{
-  background-color: #EAD1F9;
-  font-family: Verdana;
+  font-family: Prime;
+  background-image: url("ny_toner.png");
+  color: white;
+}
+
+@font-face {
+  font-family: Prime;
+  src: url(Prime-Regular.woff);
 }
 
 .thumbnail {
-  background-color: #EAD1F9;
+  background-color: #636C70;
+  opacity: 0.88;
+  color: white;
 }
 
 .jumbotron {
-  background-color: #EAD1F9;
-  color: #373438;
+  background-color: #636C70;
+  opacity: 0.88;
 }
 
 .btn{
-  background-color: #FFDD6E;
-  color: #373438;
+  background-color: black;
+  border-color: #346392;
+  color: white;
 }
 
 .browse{
@@ -43,6 +52,11 @@ dataset {
   text-overflow: ellipsis;
 }
 
+.col-sm-8 {
+  color: white;
+  background-color: #636C70;
+  opacity: 0.88;
+}
 .resource-description {
   font-size: 90%;
 }

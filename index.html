@@ -10,7 +10,6 @@ layout: default
   <p><a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/datasets" role="button">Start browsing</a></p>
 </div>
 
-<h3 class='browse'>Browse by City</h3>
 
 <div class="homepage-categories">
 {% for organization in site.organizations %}
@@ -18,7 +17,7 @@ layout: default
       {% if organization.logo and organization.logo != empty %}
         <img src="{{ site.baseurl }}{{ organization.logo }}" alt="{{ logo_alt }}">
       {% endif %}
-      {{ organization.title }}
+      <p class="caption"> {{ organization.title }} </p>
     </a>
 {% endfor %}
 </div>
