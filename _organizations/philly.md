@@ -1,5 +1,5 @@
 ---
 title: Philadelphia
-description: This is an example department provided with a new installation of JKAN
+description: Information about the affordable housing market in Philadelphia, PA.
 logo: /img/categories/philly.svg
 ---
