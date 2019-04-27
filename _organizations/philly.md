@@ -1,6 +1,6 @@
 ---
 title: Philadelphia
-description: Information about the affordable housing market in Philadelphia, PA.
+description: Information provided by the municipal government of Philadelphia, PA. 
 logo: /img/categories/philly.svg
 logo2: img/philly.svg
 ---
