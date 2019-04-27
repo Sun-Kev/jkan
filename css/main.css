@@ -61,8 +61,15 @@ dataset {
   background-color: #636C70;
   opacity: 0.88;
 }
+
+.col-sm-9 {
+  color: white;
+  background-color: #636C70;
+  opacity: 0.88;
+}
 .resource-description {
   font-size: 90%;
+  color: white;
 }
 
 .select2 {
@@ -90,14 +97,16 @@ dataset {
 
 .show-resource-details {
   font-size: 80%;
+  color: white;
 }
 
 .user-issue {
-  color: red;
+  color: white;
 }
 
 [data-component~=view-switcher] [data-hook~=view] {
   display: none;
+  color: white;
 }
 
 .homepage-categories,
@@ -141,4 +150,11 @@ dataset {
 
 .theme-gallery .panel-primary {
   border-width: 5px;
+}
+
+
+.media {
+  color: white;
+  background-color: #636C70;
+  opacity: 0.88;
 }
