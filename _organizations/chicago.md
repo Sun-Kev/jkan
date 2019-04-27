@@ -1,5 +1,5 @@
 ---
 title: Chicago
-description: This is an example department provided with a new installation of JKAN
+description: This provides data for the city of Chicago, IL.
 logo: /img/categories/chicago.svg
 ---
