@@ -5,6 +5,10 @@
   width: 64px;
 }
 
+.navbar-default {
+  background-color: #636C70;
+}
+
 body{
   font-family: Prime;
   background-image: url("ny_toner.png");

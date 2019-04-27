@@ -2,7 +2,7 @@
   {
     "title": "Austin Affordable Housing Data Sets",
     "organization": "Austin",
-    "notes": "Austin Affordable Housing Data Set",
+    "notes": "The Affordable Housing Inventory includes all income-restricted affordable units in developments funded through the Rental Housing Development Assistance Program, funded through the Acquisition and Development Program since 2007, and incentivized through Development Incentive Programs that are currently affordable. Projects within the AHI have either already been completed or are currently being developed. No warranty is made by the City of Austin regarding the specific accuracy or completeness of this dataset.",
     "category": ["Affordable Housing"],
     "url": "/jkan/datasets/austin/"
   },
@@ -23,21 +23,21 @@
   {
     "title": "New York Affordable Housing Data Sets",
     "organization": "New York City",
-    "notes": "New York Affordable Housing Data Set",
+    "notes": "The Department of Housing Preservation and Development (HPD) reports on buildings, units, and projects that began after January 1, 2014 and are counted towards the Housing New York plan. The Housing New York Units by Building file presents this data by building, and includes building-level data, such as house number, street name, BBL, and BIN for each building in a project. The unit counts are provided by building. For additional documentation, including a data dictionary, review the attachments in the “About this Dataset” section of the Primer landing page.",
     "category": ["Affordable Housing"],
     "url": "/jkan/datasets/nyc/"
   },
   {
     "title": "Philadelphia Affordable Housing Data Sets",
     "organization": "Philadelphia",
-    "notes": "Philadelphia's Affordable Housing Data Set",
+    "notes": "The Division of Housing and Community Development (DHCD) provides funding to developers that are building or renovating affordable homes. These homes are available for sale, for rent, and to support people with special needs. This dataset shows the number and location of units built between Fiscal Year (FY) 2013 and 2016.",
     "category": ["Affordable Housing"],
     "url": "/jkan/datasets/philly/"
   },
   {
     "title": "San Francisco Affordable Housing Data Sets",
     "organization": "San Francisco",
-    "notes": "San Francisco Affordable Housing Data Set",
+    "notes": "Snapshot of the Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) affordable housing pipeline projects. The projects listed are in the process of development--or are anticipated to be developed--in partnership with non-profit or for-profit developers and financed through city funding agreements, ground leases, disposition and participation agreements and conduit bond financing. The Affordable Housing Pipeline also includes housing units produced by private developers through the Inclusionary Affordable Housing Program. Data reflects all projects as of September 30, 2018",
     "category": ["Affordable Housing"],
     "url": "/jkan/datasets/sf/"
   }
