@@ -152,9 +152,11 @@ dataset {
   border-width: 5px;
 }
 
-
 .media {
-  color: white;
+  color: red;
   background-color: #636C70;
   opacity: 0.88;
+}
+.media-heading {
+  color: white;
 }

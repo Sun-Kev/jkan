@@ -1,45 +1,12 @@
-@import "custom.css"; 
-
-
 .organization-thumbnail img {
   width: 64px;
 }
 
-.navbar-default {
-  background-color: #636C70;
-}
-
 body{
-  font-family: Prime;
-  background-image: url("ny_toner.png");
-  color: white;
+  background-color: lightblue;
+  font-family: Times New Roman;
 }
 
-@font-face {
-  font-family: Prime;
-  src: url(Prime-Regular.woff);
-}
-
-.thumbnail {
-  background-color: #636C70;
-  opacity: 0.88;
-  color: white;
-}
-
-.jumbotron {
-  background-color: #636C70;
-  opacity: 0.88;
-}
-
-.btn{
-  background-color: black;
-  border-color: #346392;
-  color: white;
-}
-
-.browse{
-  color: #373438;
-}
 
 dataset {
   display: block;
@@ -56,20 +23,8 @@ dataset {
   text-overflow: ellipsis;
 }
 
-.col-sm-8 {
-  color: white;
-  background-color: #636C70;
-  opacity: 0.88;
-}
-
-.col-sm-9 {
-  color: white;
-  background-color: #636C70;
-  opacity: 0.88;
-}
 .resource-description {
   font-size: 90%;
-  color: white;
 }
 
 .select2 {
@@ -97,16 +52,14 @@ dataset {
 
 .show-resource-details {
   font-size: 80%;
-  color: white;
 }
 
 .user-issue {
-  color: white;
+  color: red;
 }
 
 [data-component~=view-switcher] [data-hook~=view] {
   display: none;
-  color: white;
 }
 
 .homepage-categories,
@@ -150,11 +103,4 @@ dataset {
 
 .theme-gallery .panel-primary {
   border-width: 5px;
-}
-
-
-.media {
-  color: white;
-  background-color: #636C70;
-  opacity: 0.88;
 }
