@@ -1,5 +1,5 @@
 ---
 title: Chicago
-description: This provides data for the city of Chicago, IL.
+description: Information about the affordable housing market in Chicago, IL.
 logo: /img/categories/chicago.svg
 ---
