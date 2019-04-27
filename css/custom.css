@@ -184,8 +184,7 @@ a:action {
   color: #249099;
 }
 
-/*a.list-group.item:hover {
-  background-color: #249099;
-}*/
-
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus{
+    background-color: #249099;
+}
 
