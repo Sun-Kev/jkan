@@ -20,7 +20,9 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
-  - title: Maps
+  - title: Chicago Map
+    url: /maps/
+  - title: NYC Map
     url: /maps/
 
 # Collections
