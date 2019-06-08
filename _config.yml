@@ -1,4 +1,4 @@
-title: JKAN
+title: TEST1
 greeting: Welcome to the Affordable Housing Comparison Portal
 description: Looking at affordable housing developments across major cities in the United States
 baseurl: /jkan
@@ -20,6 +20,8 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: Maps
+    url: /maps/
 
 # Collections
 collections:
@@ -29,6 +31,9 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
+  maps:
+    output: true
+    permalink: /maps/:path/
 
 # Collections (cont'd)
 defaults:
@@ -44,6 +49,7 @@ defaults:
       type: organizations
     values:
       layout: organization
+
 
 # Markdown settings
 markdown: kramdown
