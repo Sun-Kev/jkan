@@ -1,4 +1,4 @@
-title: Affordable Housing Portal 2
+title: Affordable Housing Portal 3
 greeting: Welcome to the Affordable Housing Comparison Portal
 description: Looking at affordable housing developments across major cities in the United States
 baseurl: /jkan
@@ -23,7 +23,7 @@ navigation:
   - title: Chicago Map
     url: /maps/
   - title: NYC Map
-    url: /maps/
+    url: /nyc_map/
 
 # Collections
 collections:
