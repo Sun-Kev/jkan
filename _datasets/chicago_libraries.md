@@ -1,7 +1,7 @@
 ---
 schema: default
-title: New York City LIbraries
-organization: New York City
+title: Chicago Libraries
+organization: Chicago
 notes: Locations and information about public libraries
 resources:
   - name: NYC Libraries CSV
