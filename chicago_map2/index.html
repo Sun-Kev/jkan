@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Map of Chicago</title>
+  <title>Map of Chicago 3</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -157,22 +157,24 @@
          document.getElementById('pd').innerHTML = '<p>Enter an Address to Find Nearby Sites!</p>';
        }
 */
-      var popup = new mapboxgl.Popup; // Initialize a new popup
+      var popup = new mapboxgl.Popup;
       map.on('mouseenter', 'tilequery-points', function(e) {
-        map.getCanvas().style.cursor = 'pointer'; // When the cursor enters a feature, set it to a pointer
-        var title = '<h3>' + e.features[0].properties.NAME + '</h3>'; // Set the store name
-        var storeType = '<h4>' + e.features[0].properties.VENUE_TYPE + '</h4>'; // Set the store type
-        var storeAddress = '<p>' + e.features[0].properties.ADDRESS + '</p>'; // Set the store address
-        var obj = JSON.parse(e.features[0].properties.tilequery); // Get the feature's tilequery object (https://docs.mapbox.com/api/maps/#response-retrieve-features-from-vector-tiles)
-        var distance = '<p>' + (obj.distance / 1609.344).toFixed(2) + ' mi. from location' + '</p>'; // Take the distance property, convert it to miles, and truncate it at 2 decimal places
-        var lon = e.features[0].properties.LON;
-        var lat = e.features[0].properties.LAT;
-        var coordinates = new mapboxgl.LngLat(lon, lat); // Create a new LngLat object (https://docs.mapbox.com/mapbox-gl-js/api/#lnglatlike)
-        var content = title + storeType + storeAddress + distance; // All the HTML elements
-        popup.setLngLat(coordinates) // Set the popup at the given coordinates
-          .setHTML(content) // Set the popup contents equal to the HTML elements you created
-          .addTo(map); // Add the popup to the map
-      })
+        map.getCanvas().style.cursor = 'pointer';
+        console.log("here1");
+        console.log(e.features[0].properties);
+        var name = '<h3>' + e.features[0].properties['name'] + '</h3>';	   
+        var phoneNumber = '<p>' + "Phone No. : " + e.features[0].properties['phone_number'] + '</p>';	
+        var additionalInfo = '<p>' + e.features[0].properties['additional_info'] + '</p>';	
+        var lon = e.features[0].properties.longitude;	        
+        var lat = e.features[0].properties.latitude;	        
+        var coordinates = new mapboxgl.LngLat(lon, lat);	
+        console.log(coordinates, "here2");
+        var content = name + phoneNumber + additionalInfo;
+        console.log(content);
+        popup.setLngLat(coordinates)
+          .setHTML(content)
+          .addTo(map);
+
       map.on('mouseleave', 'tilequery-points', function() {
         map.getCanvas().style.cursor = ''; // Reset the cursor when it leaves the point
         popup.remove(); // Remove the popup when the cursor leaves the point
