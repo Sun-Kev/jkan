@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Map of Chicago 322</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!-- Import Mapbox GL JS -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+  <!-- Import jQuery -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.1.2/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.1.2/mapbox-gl-geocoder.css' type='text/css' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .map-overlay {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.8);
+      margin-right: 20px;
+      overflow: auto;
+      border-radius: 3px;
+    }
+    #legend {
+      padding: 10px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      line-height: 18px;
+      height: 72px;
+      margin-bottom: 40px;
+      width: 185px;
+    }
+    .legend-key {
+      display: inline-block;
+      border-radius: 20%;
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+    }
+    #features {
+      padding-left: 15px;
+      padding-right: 15px;
+      top: 0;
+      height: 110px;
+      margin-top: 20px;
+      width: 270px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id='map'></div>
+  <div class='map-overlay' id='legend'></div>
+  <div class='map-overlay' id='features'>
+    <div id='pd'><h2>Find Affordable Housing and Nearby Resources</h2></div></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoianp1a3VzIiwiYSI6ImNqdmQwbDRsdzIzbDE0ZW50emRyYmI5MXQifQ.MEFNUGjaMZCU7B0ogj05oQ'; // set the access token
+    var map = new mapboxgl.Map({
+      container: 'map', // The container ID
+      style: 'mapbox://styles/mapbox/light-v10', // The map style to use
+      center: [-73.9654, 40.7829],
+      zoom: 12 // Starting zoom level
+    });
+    map.on('load', function() {
+      var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+        accessToken: mapboxgl.accessToken, // Set the access token
+        mapboxgl: mapboxgl, // Set the mapbox-gl instance
+        zoom: 13, // Set the zoom level for geocoding results
+        placeholder: "Enter a neighborhood in NYC", // This placeholder text will display in the search bar
+        bbox: [-74.04728500751165, 40.68392799015035, -73.91058699000139, 40.87764500765852]
+      });
+      // Add the geocoder to the map
+      map.addControl(geocoder, 'top-left'); // Add the search box to the top left
+      var marker = new mapboxgl.Marker({'color': '#008000'}) // Create a new green marker
+      geocoder.on('result', function(data) { // When the geocoder returns a result
+        var point = data.result.center; // Capture the result coordinates
+        var tileset = 'natashamathur.9qgupot2'; // replace this with the ID of the tileset you created
+        var radius = 1609; // 1609 meters is roughly equal to one mile
+        var limit = 50; // The maximum amount of results to return
+        var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[0] + ',' + point[1] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
+          marker.setLngLat(point).addTo(map); // Add the marker to the map at the result coordinates
+          $.ajax({ // Make the API call
+            method: 'GET',
+            url: query,
+          }).done(function(data) { // Use the response to populate the 'tilequery' source
+            map.getSource('tilequery').setData(data);
+          })
+      });
+      map.addSource('tilequery', { // Add a new source to the map style: https://docs.mapbox.com/mapbox-gl-js/api/#map#addsource
+        type: "geojson",
+        data: {
+          "type": "FeatureCollection",
+          "features": []
+        }
+      });
+      // Add the legend to the map
+      var layers = ['Housing', 'Educational', 'Food', 'Health', 'Transport'];
+      var colors = ['#4638E8', '#32EB5B', '#FF3E35', '#D137FF', '#FFC93D'];
+      for (i = 0; i < layers.length; i++) {
+        var layer = layers[i];
+        var color = colors[i];
+        var item = document.createElement('div');
+        var key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+        var value = document.createElement('span');
+        value.innerHTML = layer;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+      }
+      map.addLayer({ // Add a new layer to the map style: https://docs.mapbox.com/mapbox-gl-js/api/#map#addlayer
+        id: "tilequery-points",
+        type: "circle",
+        source: "tilequery", // Set the layer source
+        paint: {
+          "circle-stroke-color": "white",
+          "circle-stroke-width": { // Set the stroke width of each circle: https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-stroke-width
+            stops: [
+              [0, 0.1],
+              [18, 3]
+            ],
+            base: 5
+          },
+          "circle-radius": { // Set the radius of each circle, as well as its size at each zoom level: https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-radius
+            stops: [
+              [12, 5],
+              [22, 180]
+            ],
+            base: 5
+          },
+          "circle-color": [ // Specify the color each circle should be
+            'match', // Use the 'match' expression: https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+            ['get', 'type'], // Use the result 'VENUE_TYPE' property
+            'Affordable Housing', '#4638E8',	            
+            'Library', '#32EB5B',	            
+            'School', '#32EB5B',	
+            'Grocery Store', '#FF3E35',	
+            'Restaurants', '#FF3E35',	
+            'Food', '#FF3E35',	
+            'Health', '#D137FF',	
+            'Transport', '#FFC93D',	
+            '#FF0000' // any other store type
+          ]
+        }
+      });
+/*
+      if (tilequery.length > 0) {
+         document.getElementById('pd').innerHTML = '<p><strong>There are ' + tilequery.length + ' sites nearby.</strong></p>';
+       } else {
+         document.getElementById('pd').innerHTML = '<p>Enter an Address to Find Nearby Sites!</p>';
+       }
+*/
+          var popup = new mapboxgl.Popup;
+      map.on('mouseenter', 'tilequery-points', function(e) {
+        map.getCanvas().style.cursor = 'pointer';
+        console.log("here1");
+        console.log(e.features[0].properties);
+        var name = '<h3>' + e.features[0].properties['name'] + '</h3>';	   
+        var phoneNumber = '<p>' + "Phone No. : " + e.features[0].properties['phone_number'] + '</p>';	
+        var additionalInfo = '<p>' + e.features[0].properties['additional_info'] + '</p>';	
+        var lon = e.features[0].properties.longitude;	        
+        var lat = e.features[0].properties.latitude;	        
+        var coordinates = new mapboxgl.LngLat(lon, lat);	
+        console.log(coordinates, "here2");
+        var content = name + phoneNumber + additionalInfo;
+        console.log(content);
+        popup.setLngLat(coordinates)
+          .setHTML(content)
+          .addTo(map);
+      })
+      map.on('mouseleave', 'tilequery-points', function() {
+        map.getCanvas().style.cursor = '';
+        popup.remove();
+      });
+    })
+  </script>
+
+</body>
+
+</html>
