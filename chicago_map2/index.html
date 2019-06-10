@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Map of Chicago 3</title>
+  <title>Map of Chicago 5</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -142,11 +142,12 @@
           },
           "circle-color": [ // Specify the color each circle should be
             'match', // Use the 'match' expression: https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            ['get', 'VENUE_TYPE'], // Use the result 'VENUE_TYPE' property
-            'City WIC', '#008000',
-            'Pharmacy', '#0000FF',
-            'MinuteClinic', '#FF0000',
-            '#9ACD32' // any other venue type (Community Health Clinics)
+            ['get', 'type'], // Use the result 'VENUE_TYPE' property
+            'Affordable Housing', '#FFD27A',	            
+            'Library', '#6CEBDB',	            
+            'School', '#FF87AB',	
+            'Grocery', '#D0EB63',	
+            '#FF0000' // any other store type
           ]
         }
       });
