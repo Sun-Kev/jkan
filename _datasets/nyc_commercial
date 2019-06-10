@@ -1,0 +1,13 @@
+---
+schema: default
+title: New York City Yelp Data Set
+organization: New York City
+notes: Data acquired from the Yelp API including restaurants, food, health, and transportation. 
+resources:
+  - name: NYC SES CSV
+    url: 'https://github.com/natashamathur/MapBuilder/blob/master/data/nyc_yelp.csv'
+    format: csv
+category:
+  - Commercial
+maintainer: Kevin Sun & Natasha Mathur
+---
