@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Map of Chicago 322</title>
+  <title>Map of NYC</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -85,7 +85,7 @@
       var marker = new mapboxgl.Marker({'color': '#008000'}) // Create a new green marker
       geocoder.on('result', function(data) { // When the geocoder returns a result
         var point = data.result.center; // Capture the result coordinates
-        var tileset = 'natashamathur.9qgupot2'; // replace this with the ID of the tileset you created
+        var tileset = 'natashamathur.37rw8llk'; // replace this with the ID of the tileset you created
         var radius = 1609; // 1609 meters is roughly equal to one mile
         var limit = 50; // The maximum amount of results to return
         var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[0] + ',' + point[1] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
