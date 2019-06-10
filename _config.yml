@@ -26,6 +26,8 @@ navigation:
     url: /chicago_map2/
   - title: NYC Map
     url: /nyc_map/
+  - title: test_NYC
+    url: /test_nyc/
 
 # Collections
 collections:
