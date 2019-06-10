@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Map of Chicago 6</title>
+  <title>Map of Chicago 317</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -62,8 +62,8 @@
 
   <div id='map'></div>
   <div class='map-overlay' id='legend'></div>
-  <div class='map-overlay' id='features'><h2>Affordable Housing Finder</h2>
-    <div id='pd'><p>Find Affordable Housing and Closeby Landmarks</p></div></div>
+  <div class='map-overlay' id='features'>
+    <div id='pd'><p>Find Affordable Housing and Closeby Resources</p></div></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoianp1a3VzIiwiYSI6ImNqdmQwbDRsdzIzbDE0ZW50emRyYmI5MXQifQ.MEFNUGjaMZCU7B0ogj05oQ'; // set the access token
     var map = new mapboxgl.Map({
@@ -105,8 +105,8 @@
         }
       });
       // Add the legend to the map
-      var layers = ['City WIC', 'Community Health Clinic', 'Pharmacy', 'MinuteClinic'];
-      var colors = ['#008000', '#9ACD32', '#0000FF', '#FF0000'];
+      var layers = ['Housing', 'Educational', 'Food', 'Health', 'Transport'];
+      var colors = ['#4638E8', '#32EB5B', '#FF3E35', '#D137FF', '#FFC93D'];
       for (i = 0; i < layers.length; i++) {
         var layer = layers[i];
         var color = colors[i];
