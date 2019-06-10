@@ -93,6 +93,24 @@
           "features": []
         }
       });
+      
+      // Add the legend to the map
+      var layers = ['City WIC', 'Community Health Clinic', 'Pharmacy', 'MinuteClinic'];
+      var colors = ['#008000', '#9ACD32', '#0000FF', '#FF0000'];
+      for (i = 0; i < layers.length; i++) {
+        var layer = layers[i];
+        var color = colors[i];
+        var item = document.createElement('div');
+        var key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+        var value = document.createElement('span');
+        value.innerHTML = layer;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+      }
+      
       map.addLayer({
         id: "tilequery-points",
         type: "circle",
