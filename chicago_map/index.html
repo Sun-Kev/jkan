@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Chicago Map 2</title>
+  <title>Chicago Map 309</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
@@ -96,22 +96,6 @@
         }
       });
       
-      // Add the legend to the map
-      var layers = ['City WIC', 'Community Health Clinic', 'Pharmacy', 'MinuteClinic'];
-      var colors = ['#008000', '#9ACD32', '#0000FF', '#FF0000'];
-      for (i = 0; i < layers.length; i++) {
-        var layer = layers[i];
-        var color = colors[i];
-        var item = document.createElement('div');
-        var key = document.createElement('span');
-        key.className = 'legend-key';
-        key.style.backgroundColor = color;
-        var value = document.createElement('span');
-        value.innerHTML = layer;
-        item.appendChild(key);
-        item.appendChild(value);
-        legend.appendChild(item);
-      }
       
       map.addLayer({
         id: "tilequery-points",
