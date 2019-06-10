@@ -6,4 +6,4 @@ The information comes from  [Yelp](https://www.yelp.com/) API, the [Chicago Data
 
 Built by [Kevin Sun](https://github.com/Sun-Kev) and [Natasha Mathur](https://github.com/natashamathur)
 
-The code informing these maps can be found [`here`](https://github.com/natashamathur/MapBuilder)
+The code informing these maps can be found [`here`](https://github.com/natashamathur/MapBuilder).
