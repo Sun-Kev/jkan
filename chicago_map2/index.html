@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Map of Chicago 5</title>
+  <title>Map of Chicago 6</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -158,7 +158,7 @@
          document.getElementById('pd').innerHTML = '<p>Enter an Address to Find Nearby Sites!</p>';
        }
 */
-      var popup = new mapboxgl.Popup;
+          var popup = new mapboxgl.Popup;
       map.on('mouseenter', 'tilequery-points', function(e) {
         map.getCanvas().style.cursor = 'pointer';
         console.log("here1");
@@ -175,12 +175,12 @@
         popup.setLngLat(coordinates)
           .setHTML(content)
           .addTo(map);
-
+      })
       map.on('mouseleave', 'tilequery-points', function() {
-        map.getCanvas().style.cursor = ''; // Reset the cursor when it leaves the point
-        popup.remove(); // Remove the popup when the cursor leaves the point
+        map.getCanvas().style.cursor = '';
+        popup.remove();
       });
-    });
+    })
   </script>
 
 </body>
