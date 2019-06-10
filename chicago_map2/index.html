@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Map of Chicago 319</title>
+  <title>Map of Chicago 322</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -63,7 +63,7 @@
   <div id='map'></div>
   <div class='map-overlay' id='legend'></div>
   <div class='map-overlay' id='features'>
-    <div id='pd'><p>Find Affordable Housing and Closeby Resources</p></div></div>
+    <div id='pd'><h2>Find Affordable Housing and Nearby Resources</h2></div></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoianp1a3VzIiwiYSI6ImNqdmQwbDRsdzIzbDE0ZW50emRyYmI5MXQifQ.MEFNUGjaMZCU7B0ogj05oQ'; // set the access token
     var map = new mapboxgl.Map({
@@ -77,7 +77,7 @@
         accessToken: mapboxgl.accessToken, // Set the access token
         mapboxgl: mapboxgl, // Set the mapbox-gl instance
         zoom: 13, // Set the zoom level for geocoding results
-        placeholder: "Enter an address or place name", // This placeholder text will display in the search bar
+        placeholder: "Enter a neighborhood in Chicago", // This placeholder text will display in the search bar
         bbox: [-88.3,41.6,-87.6,42.0] // Set a bounding box
       });
       // Add the geocoder to the map
