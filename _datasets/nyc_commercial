@@ -5,7 +5,7 @@ organization: New York City
 notes: Data acquired from the Yelp API including restaurants, food, health, and transportation. 
 resources:
   - name: NYC Yelp CSV
-    url: 'https://github.com/natashamathur/MapBuilder/blob/master/data/nyc_yelp.csv'
+    url: 'https://github.com/natashamathur/MapBuilder/raw/master/data/nyc_yelp.csv'
     format: csv
 category:
   - Commercial
