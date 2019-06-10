@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>Vaccination Clinic Finder</title>
+  <title>Map of Chicago</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Import Mapbox GL JS -->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -62,7 +62,8 @@
 
   <div id='map'></div>
   <div class='map-overlay' id='legend'></div>
-  <div class='map-overlay' id='features'><h2>Vaccination Clinic Finder</h2><div id='pd'><p>Enter an Address to Find Nearby Sites!</p></div></div>
+  <div class='map-overlay' id='features'><h2>Affordable Housing Finder</h2>
+    <div id='pd'><p>Find Affordable Housing and Closeby Landmarks</p></div></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoianp1a3VzIiwiYSI6ImNqdmQwbDRsdzIzbDE0ZW50emRyYmI5MXQifQ.MEFNUGjaMZCU7B0ogj05oQ'; // set the access token
     var map = new mapboxgl.Map({
@@ -84,7 +85,7 @@
       var marker = new mapboxgl.Marker({'color': '#008000'}) // Create a new green marker
       geocoder.on('result', function(data) { // When the geocoder returns a result
         var point = data.result.center; // Capture the result coordinates
-        var tileset = 'jzukus.2m8kpjuq'; // replace this with the ID of the tileset you created
+        var tileset = 'natashamathur.9qgupot2'; // replace this with the ID of the tileset you created
         var radius = 1609; // 1609 meters is roughly equal to one mile
         var limit = 50; // The maximum amount of results to return
         var query = 'https://api.mapbox.com/v4/' + tileset + '/tilequery/' + point[0] + ',' + point[1] + '.json?radius=' + radius + '&limit= ' + limit + ' &access_token=' + mapboxgl.accessToken;
