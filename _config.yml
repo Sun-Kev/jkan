@@ -21,13 +21,9 @@ navigation:
   - title: Organizations
     url: /organizations/
   - title: Chicago Map
-    url: /chicago_map/
-  - title: test map
-    url: /chicago_map2/
+    url: /map_of_chicago/
   - title: NYC Map
-    url: /nyc_map/
-  - title: test_NYC
-    url: /test_nyc/
+    url: /map_of_nyc/
 
 # Collections
 collections:
