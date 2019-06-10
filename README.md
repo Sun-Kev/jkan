@@ -7,3 +7,5 @@ The information comes from  [Yelp](https://www.yelp.com/) API, the [Chicago Data
 Built by [Kevin Sun](https://github.com/Sun-Kev) and [Natasha Mathur](https://github.com/natashamathur)
 
 [`Data Consolidation`](https://github.com/Sun-Kev/jkan/blob/gh-pages/data_consolidation.ipynb)
+
+If there are any issues opening a notebook, please enter the link into the renderer at the following site: https://nbviewer.jupyter.org/
