@@ -1,13 +1,7 @@
-# JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=gh-pages)](https://travis-ci.org/timwis/jkan) [![Join the chat at https://gitter.im/timwis/jkan](https://badges.gitter.im/timwis/jkan.svg)](https://gitter.im/timwis/jkan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# [Affordable Housing Comparison Portal - with Maps!](https://sun-kev.github.io/jkan/)
 
-https://sun-kev.github.io/jkan/
+Looking for affordable housing in New York or Chicago? Check out these maps showing you not only affordable housing complexes available, but also resources and public services around them. 
 
+The information comes from  [Yelp](https://www.yelp.com/) API, the [Chicago Data Portal](https://data.cityofchicago.org/), and  [NYC Open Data](https://opendata.cityofnewyork.us/), and is brought to you using [Mapbox](https://www.mapbox.com/) and [JKAN](https://jkan.io/) / [Jekyll](https://jekyllrb.com/)
 
-## Installation
-See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io) for an installation wizard,
-or follow the [manual installation](https://github.com/timwis/jkan/wiki/Manual-Installation) instructions yourself.
-
-For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
-
-## Development
-Please see the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) page in the wiki.
+Built by [Kevin Sun](https://github.com/Sun-Kev) and [Natasha Mathur](https://github.com/natashamathur)
