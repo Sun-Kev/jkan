@@ -21,7 +21,7 @@ navigation:
   - title: Organizations
     url: /organizations/
   - title: Chicago Map
-    url: /maps/
+    url: /chicago_map/
   - title: NYC Map
     url: /nyc_map/
 
